@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - Sitema de Controle</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        body > table{
+    width: 80%;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+.sectionVoltar{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.btnVoltar{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+@media(max-width: 600px) {
+    input[type=submit]{
+        width: 100%;
+    }
+  .btnVoltar{
+      width: 100%;
+  }
+
+}
+
+    </style>
+</head>
+<body id="home">
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Produtos</h1>
+            
+        </div>
+    </nav>
+    <div align="center">
+        <table>
+            <tr>
+                <td>
+                    <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                        <div>
+                            <label>Nome*</label><label class="validation-error hide" id="nameValidationError">Este campo é obrigatório.</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div>
+                            <label>Categoria</label>
+                            <input type="text" name="categoria" id="categoria">
+                        </div>
+                        <div>
+                            <label>Preço</label>
+                            <input type="text" name="preco" id="preco">
+                        </div>
+                        <div>
+                            <label>Quantidade em Estoque</label>
+                            <input type="text" name="estoque" id="estoque">
+                        </div>
+                        <div  class="form-action-buttons">
+                            
+                            <div class="sectionVoltar">
+                               <button class="btnVoltar" onclick="returnMain()">Voltar</button>
+                                <input type="submit" value="Adicionar">
+                            </div>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 70%;">
+                    <table class="list" id="productList">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Categoria</th>
+                                <th>Preço</th>
+                                <th>Estoque</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+    
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+    <script src="produtoModule.js"></script>
+</body>
+</html>

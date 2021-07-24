@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body > table{
+    width: 80%;
+}
+
+table{
+    border-collapse: collapse;
+}
+table.list{
+    width:100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even),table.list thead>tr {
+    background-color: #dddddd;
+}
+
+input[type=text], input[type=number] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit]{
+    width: 30%;
+    background-color: #ddd;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form div.form-action-buttons{
+    text-align: right;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color:   red;
+    margin-left: 5px;
+}
+
+.hide{
+    display:none;
+}
+
+body{
+   height: 100vh;
+}
+
+.table-responsive{
+   display: table !important;
+}
+
+.table{
+   margin-bottom: 0 !important;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Produtos</h1>
+            
+        </div>
+    </nav>
+    <table class="table table-responsive h-100">
+        <tbody>
+            <tr>
+                <td align="center">
+                    <table class="table table-responsive" id="tb1">
+                        <thead>
+                            <tr>
+                                <th colspan="3">tb1</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>5</td>
+                                <td>6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center">
+                    <table class="table table-responsive" id="tb2">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>7</td>
+                                <td>8</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center">
+                    <table class="table table-responsive" id="tb3">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table class="table table-responsive" id="tb4">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>19</td>
+                                <td>20</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td> 
+                <td align="center">
+                    <table class="table table-responsive" id="tb5">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>25</td>
+                                <td>26</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td>28</td>
+                                <td>29</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center">
+                    <table class="table table-responsive" id="tb6">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb6</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>31</td>
+                                <td>32</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td>35</td>
+                                <td>36</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    <table class="table table-responsive" id="tb7">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb7</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>37</td>
+                                <td>38</td>
+                                <td>39</td>
+                            </tr>
+                            <tr>
+                                <td>40</td>
+                                <td>41</td>
+                                <td>42</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center">
+                    <table class="table table-responsive" id="tb8">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb8</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>43</td>
+                                <td>44</td>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <td>46</td>
+                                <td>47</td>
+                                <td>48</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+                <td align="center">
+                    <table class="table table-responsive" id="tb9">
+                        <thead>
+                            <tr>
+                                <th colspan="3" align="center">tb9</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>49</td>
+                                <td>50</td>
+                                <td>51</td>
+                            </tr>
+                            <tr>
+                                <td>52</td>
+                                <td>53</td>
+                                <td>54</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var selectedRow = null
+
+function onFormSubmit() {
+    if (validate()) {
+        var formData = readFormData();
+        if (selectedRow == null)
+            insertNewRecord(formData);
+        else
+            updateRecord(formData);
+        resetForm();
+    }
+}
+
+function readFormData() {
+    var formData = {};
+    formData["fullName"] = document.getElementById("fullName").value;
+    formData["empCode"] = document.getElementById("empCode").value;
+    formData["salary"] = document.getElementById("salary").value;
+    formData["city"] = document.getElementById("city").value;
+    return formData;
+}
+
+function insertNewRecord(data) {
+    var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.length);
+    cell1 = newRow.insertCell(0);
+    cell1.innerHTML = data.fullName;
+    cell2 = newRow.insertCell(1);
+    cell2.innerHTML = data.empCode;
+    cell3 = newRow.insertCell(2);
+    cell3.innerHTML = data.salary;
+    cell4 = newRow.insertCell(3);
+    cell4.innerHTML = data.city;
+    cell4 = newRow.insertCell(4);
+    cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
+                       <a onClick="onDelete(this)">Delete</a>`;
+}
+
+function resetForm() {
+    document.getElementById("fullName").value = "";
+    document.getElementById("empCode").value = "";
+    document.getElementById("salary").value = "";
+    document.getElementById("city").value = "";
+    selectedRow = null;
+}
+
+function onEdit(td) {
+    selectedRow = td.parentElement.parentElement;
+    document.getElementById("fullName").value = selectedRow.cells[0].innerHTML;
+    document.getElementById("empCode").value = selectedRow.cells[1].innerHTML;
+    document.getElementById("salary").value = selectedRow.cells[2].innerHTML;
+    document.getElementById("city").value = selectedRow.cells[3].innerHTML;
+}
+function updateRecord(formData) {
+    selectedRow.cells[0].innerHTML = formData.fullName;
+    selectedRow.cells[1].innerHTML = formData.empCode;
+    selectedRow.cells[2].innerHTML = formData.salary;
+    selectedRow.cells[3].innerHTML = formData.city;
+}
+
+function onDelete(td) {
+    if (confirm('Are you sure to delete this record ?')) {
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
+function validate() {
+    isValid = true;
+    if (document.getElementById("fullName").value == "") {
+        isValid = false;
+        document.getElementById("fullNameValidationError").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("fullNameValidationError").classList.contains("hide"))
+            document.getElementById("fullNameValidationError").classList.add("hide");
+    }
+    return isValid;
+}
+    </script>
+</body>
+</html>
